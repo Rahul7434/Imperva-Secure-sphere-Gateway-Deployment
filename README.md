@@ -1,6 +1,7 @@
 # Imperva-Secure-sphere-Gateway-Deployment
 
 
+
 ## Imperva SecureSphere Gateway Deployment on Azure
 1. Basic Requirement
 ```
@@ -28,8 +29,20 @@ First deploy the Gateway VM from Azure Marketplace using Imperva DAM image.
  The same Azure image is used for both Management Server and Gateway, and during First Time Login you select the component type.
 -Attach additional disk.
 ```
-
-
+4. Select Gateway Component
+During FTL:
+Select Gateway.
+Select Gateway model, for example:
+MV2500
+MV6500
+Select whether Agent Listener SSL should be enabled.
+Enter Agent Listener port, for example default/configured port such as 8030 or your organization-approved listener port.
+Enter MX/Management Server IP address.
+Enter the same secure password used on MX.
+Enter Imperva support password.
+Enter timezone.
+Confirm configuration.
+ Gateway FTL mandatory parameters include component, model type, management IP, secure password, Imperva password, gateway group, agent listener SSL, and agent listener port
 
 
 
