@@ -1,5 +1,13 @@
 # Imperva-Secure-sphere-Gateway-Deployment
 
+For the deployment of Imperva SecureSphere Gateway, first we should have the MX server ready and active license uploaded on MX.
+After that, we need to deploy the Gateway VM in Azure. We need to add the required data disk as per sizing requirement and configure static private IP.
+Before starting FTL, required connectivity should be allowed. Port 22 is required from jump server to Gateway for SSH. Port 8083 is required for MX GUI access and Gateway communication with MX. Port 443 is required for MX management of Gateway and Agent registration. Port 5555 is the Agent listener port for audit data communication from Agent to Gateway. If Gateway cluster is used, port 7700 is required for Gateway-to-Gateway data sync and port 3792 TCP/UDP is required for Gateway cluster management.
+
+Before FTL, we need the secure password for MX registration and Imperva user password for local Gateway appliance/support access.
+Then start FTL on Gateway. During FTL, select Gateway, select Gateway model like MV2500 or MV6500 as per traffic/log sizing, enable Agent Listener SSL if required, enter Agent listener port 5555, enter MX IP, enter secure password for MX registration, enter Imperva support password, enter timezone, and confirm the configuration.
+
+After successful FTL, verify Gateway registration on MX. If HA/cluster is required, configure Gateway cluster by opening required Gateway-to-Gateway ports and running the cluster configuration command with cluster port and interface.
 
 
 ## Imperva SecureSphere Gateway Deployment on Azure
@@ -29,7 +37,8 @@ First deploy the Gateway VM from Azure Marketplace using Imperva DAM image.
  The same Azure image is used for both Management Server and Gateway, and during First Time Login you select the component type.
 -Attach additional disk.
 ```
-4. Select Gateway Component
+FTL Setup
+```
 During FTL:
 Select Gateway.
 Select Gateway model, for example:
@@ -43,7 +52,7 @@ Enter Imperva support password.
 Enter timezone.
 Confirm configuration.
  Gateway FTL mandatory parameters include component, model type, management IP, secure password, Imperva password, gateway group, agent listener SSL, and agent listener port
-
+```
 
 
 
