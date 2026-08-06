@@ -10,6 +10,8 @@ Then start FTL on Gateway. During FTL, select Gateway, select Gateway model like
 After successful FTL, verify Gateway registration on MX. If HA/cluster is required, configure Gateway cluster by opening required Gateway-to-Gateway ports and running the cluster configuration command with cluster port and interface.
 
 
+
+
 ## Imperva SecureSphere Gateway Deployment on Azure
 1. Basic Requirement
 ```
