@@ -59,6 +59,34 @@ Confirm the Parameters and proceed to next, then it will start the configuration
 
 ```
 Adding New Gateway to existing Gateway Cluster 
+
+To add the gateway to existing cluster, open the "impcfg" it will promt for:
+
+1. Manage SecureSphere management server
+2. Manage SecureSphere gateway server
+3. manage platform
+4. Show changes
+5. Discard chnages
+6. Save settings
+7. Apply settings
+8. Quit (Discart not save)
+
+
+* Select option 2 for manage SecureSphere gateway server then it will prompt for:
+      - Perform action (start, stop, etc)
+      - Change management server address/password
+      - Manage Hardware Security modules
+      - Manage remote agents
+      - manage interfaces and routes
+      - Change virtual gateway model
+      - Change Cluster configuration
+  (Ent this level, Jump to previous level, Top level, quite)
+
+
+
+
+
+
 ```
 
 ```
