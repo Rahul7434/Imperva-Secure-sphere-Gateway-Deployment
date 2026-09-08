@@ -41,13 +41,13 @@ First deploy the Gateway VM from Azure Marketplace using Imperva DAM image.
 ```
 FTL Setup
 ```
-During FTL:
+During FTL: (First Time login)
 Select Gateway.
 Select Gateway model, for example:
 MV2500
 MV6500
-Select whether Agent Listener SSL should be enabled.
-Enter Agent Listener port, for example default/configured port such as 8030 or your organization-approved listener port.
+Select whether SSL should be enabled. (This option may consume CPU on agent host)
+Enter Agent Listener port 5555, for example default/configured port such as 8030 or your organization-approved listener port.
 Enter MX/Management Server IP address.
 Enter the same secure password used on MX.
 Enter Imperva support password.
