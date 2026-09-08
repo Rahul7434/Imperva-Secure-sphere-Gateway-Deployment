@@ -88,7 +88,13 @@ To add the gateway to existing cluster, open the "impcfg" it will promt for:
       "Do you want to register into cluster group [y/n]" y and enter the cluster group name.
       - Then select option "t" for "top level" and "S" for save the settings.
      
-    
+* This will prompt for confirmation "C":
+     -impctl service stop
+     -impctl gateway cluster config --cluster-port-5559 --clusterinterface=eth0
+     - impctl gateway register --gateway-group-name="cluster groupname"
+     - impctl service start --prepare --transient gateway
+
+
       
 
 
