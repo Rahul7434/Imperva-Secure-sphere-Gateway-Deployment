@@ -157,7 +157,140 @@ Temporarily interrupt connectivity
 
 ```
 
+# Imperva SecureSphere MX Deployment:
+```
+Imperva SecureSphere MX Deployment on Azure
+1. Purpose of the MX
+The MX, or Management Server, is the central management component of the Imperva SecureSphere environment.
 
+It is used to:
+Provide the SecureSphere GUI
+Manage Gateways and Agents
+Store SecureSphere configuration
+Manage policies
+Manage audit configuration
+Manage alerts and violations
+Manage reports
+Upload and manage licenses
+Manage Gateway groups and clusters
+Maintain system-level configuration
 
+The MX must normally be deployed before the Gateways because the Gateway requires a reachable MX during registration.
+```
 
+2. MX basic requirements
+```
+Before deploying an MX, ensure the following are available:
+Azure subscription
+Resource group
+Supported Azure region
+VNet and subnet
+NSG rules
+Supported VM size
+Static private IP
+Required storage
+Valid hostname
+DNS and NTP details
+Approved administrator passwords
+Secure password
+System/internal database password
+GRUB password, where requested
+License file or license entitlement
 
+Unlike Gateway deployment, you cannot require the MX to already exist before deploying the first MX. The MX is normally the first SecureSphere component deployed.
+```
+3. Azure VM deployment
+```
+Log in to Azure Portal.
+Go to Azure Marketplace.
+Search for the supported Imperva DAM image.
+Select the appropriate Imperva DAM Marketplace image.
+Select the subscription.
+Select or create the resource group.
+Select the supported region.
+Select the VNet and subnet.
+Configure the correct NSG.
+Select the supported VM size.
+Configure a static private IP.
+Avoid assigning a public IP unless explicitly required.
+Enter a valid hostname.
+Configure the OS disk.
+Attach the required additional data disk.
+Complete VM deployment.
+The same Azure DAM image may be used for multiple appliance roles. The component role is selected during FTL
+```
+5. MX connectivity requirements
+```
+Before FTL, allow the approved connectivity.
+At minimum, the deployment generally requires:
+Jump Server → MX TCP 22
+Administrator → MX TCP 8083
+Gateway ↔ MX Required management/registration ports
+DNS ↔ MX DNS port used by the organization
+NTP ↔ MX NTP port used by the organization
+```
+
+6. Information required before MX FTL
+```
+Keep the following information ready:
+Management interface
+Management IP with CIDR
+Default gateway
+Hostname
+DNS server
+DNS domain
+NTP/time server
+Timezone
+Root password
+CLI administrator username and password
+Secure password
+Internal system/database password
+GRUB password
+Appliance model
+License details
+The FTL wizard can request component role, administrative passwords, network information, hostname, default gateway, timezone, CLI users, and virtual appliance model
+```
+
+7. MX FTL setup
+```
+Log in to the newly deployed VM through SSH or the supported console.
+During FTL:
+Select the Management Server/MX component.
+Select the required virtual appliance model.
+Select the management interface.
+Enter the management IP with CIDR.
+Enter the default gateway.
+Enter the hostname.
+Enter the timezone.
+Enter DNS servers and domain, if prompted.
+Enter NTP servers, if prompted.
+Configure the root password.
+Configure the CLI administrative user.
+Enter the secure password.
+Enter the internal system/database password.
+Enter the GRUB password, if prompted.
+Review the configuration.
+Save and confirm it.
+Allow the FTL process to initialize the MX database and services.
+```
+8. Important MX passwords
+```
+Secure password
+The secure password establishes protected trust and registration between Imperva components.
+You must keep it available for:
+Gateway registration
+Component communication
+Supported registration operations
+System password
+
+The MX may request a system password for its internal database during initial setup.
+This is different from:
+Root password
+CLI-user password
+SecureSphere GUI admin password
+Gateway Imperva password
+GUI administrator password
+
+Used to access the MX GUI:
+https://<MX-IP>:8083
+```
