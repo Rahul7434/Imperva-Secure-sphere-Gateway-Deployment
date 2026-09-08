@@ -92,10 +92,37 @@ Examples:
 -Refresh Gateway status
 
 3. manage platform
+(This option manages the underlying Imperva appliance platform and operating-system-level settings.
+It is not limited to the MX or Gateway application. It controls common appliance functions such as networking, users, hostname, time, and other platform settings.)
+-Network interfaces
+-IP addresses, -Default gateway, -Static routes, -DNS configuration, -Hostname, -Timezone, -NTP/time servers, -Operating-system users, -Password changes, -External authentication,
+-Bootloader settings, -Other appliance-level configuration
+
 4. Show changes
+(This shows the configuration changes you have selected during the current impcfg session but have not yet applied.
+Think of it as a review screen.)
+
 5. Discard chnages
+(This removes the pending changes made during the current configuration session.
+It returns the staged configuration to the last saved or active state.)
+
 6. Save settings
+(This saves the configuration changes you selected.
+However, saving does not necessarily mean that the changes are already active. Some changes need to be applied and may cause services to restart or network settings to change.)
+
 7. Apply settings
+(This executes the saved changes and makes them active on the appliance.)
+Depending on the change, Apply Settings may:
+Run generated impctl commands
+Stop Gateway services
+Unregister the Gateway
+Change configuration
+Register the Gateway again
+Prepare services
+Start or restart services
+Change networking
+Temporarily interrupt connectivity
+
 8. Quit (Discart not save)
 
 
