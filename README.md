@@ -83,6 +83,14 @@ To add the gateway to existing cluster, open the "impcfg" it will promt for:
   (Ent this level, Jump to previous level, Top level, quite)
 
 
+* Select option 8 for Change Cluster configguration:
+      - Select option 1 for "Add cluster configuration" it will prompt for enter cluster port "5559"
+      "Do you want to register into cluster group [y/n]" y and enter the cluster group name.
+      - Then select option "t" for "top level" and "S" for save the settings.
+     
+    
+      
+
 
 
 
