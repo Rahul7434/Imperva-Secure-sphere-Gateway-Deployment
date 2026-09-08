@@ -62,6 +62,7 @@ Confirm the Parameters and proceed to next, then it will start the configuration
 Adding New Gateway to existing Gateway Cluster 
 ```
 To add the gateway to existing cluster, open the "impcfg" it will promt for:
+(We can use impcfg to modify Imperva appliance configuration safely instead of manually editing operating-system or SecureSphere configuration files.)
 
 1. Manage SecureSphere management server
 2. Manage SecureSphere gateway server
