@@ -52,8 +52,15 @@ Enter MX/Management Server IP address.
 Enter the same secure password used on MX.
 Enter Imperva support password.
 Enter timezone.
-Confirm configuration.
- Gateway FTL mandatory parameters include component, model type, management IP, secure password, Imperva password, gateway group, agent listener SSL, and agent listener port
+Select true or false "DO you wish to enable sonar only mode?"
+Confirm the Parameters and proceed to next, then it will start the configuration.
+ Gateway FTL mandatory parameters include component, model type, management IP, secure password, Imperva password, gateway group, agent listener SSL, and agent listener port.
+
+
+```
+Adding New Gateway to existing Gateway Cluster 
+```
+
 ```
 
 
