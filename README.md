@@ -58,8 +58,9 @@ Confirm the Parameters and proceed to next, then it will start the configuration
 
 
 ```
-Adding New Gateway to existing Gateway Cluster 
 
+Adding New Gateway to existing Gateway Cluster 
+```
 To add the gateway to existing cluster, open the "impcfg" it will promt for:
 
 1. Manage SecureSphere management server
@@ -96,20 +97,10 @@ To add the gateway to existing cluster, open the "impcfg" it will promt for:
      - After confirmation this will apply the change.
 
  
- Now Move Gateway to Cluster Through GUI:
+ * Now Move Gateway to Cluster Through GUI:
      -Go to the Cluster management on mx GUI 
      -Select the gateway and click on move and it will prompt for select cluster group name
      
-
-
-
-      
-
-
-
-
-
-```
 
 ```
 
