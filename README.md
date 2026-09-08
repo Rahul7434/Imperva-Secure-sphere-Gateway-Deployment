@@ -62,10 +62,35 @@ Confirm the Parameters and proceed to next, then it will start the configuration
 Adding New Gateway to existing Gateway Cluster 
 ```
 To add the gateway to existing cluster, open the "impcfg" it will promt for:
-(We can use impcfg to modify Imperva appliance configuration safely instead of manually editing operating-system or SecureSphere configuration files.)
+(We can use impcfg to modify Imperva appliance configuration safely instead of manually editing operating-system or SecureSphere configuration files. The exact submenus can differ depending on whether the appliance is an MX, Gateway, SOM, or DAS,)
 
-1. Manage SecureSphere management server
-2. Manage SecureSphere gateway server
+1. Manage SecureSphere management server:
+(This option manages settings and operations related to the Management Server, also called the MX.)
+Examples:
+-Start, stop, or restart MX services
+-Check or refresh Management Server status
+-Manage MX-specific configuration
+-Change settings related to Management Server operations
+-Configure or modify MX connectivity
+-Perform supported MX registration or system-management operations
+
+2. Manage SecureSphere gateway server:
+(This is the main option we will use for activities such as Gateway registration, cluster configuration, Agent-listener configuration, and Gateway service operations.)
+-Perform Gateway actions
+-Change the Gateway name
+-Change the Management Server address or password
+-Manage Hardware Security Modules
+-Manage remote Agents
+-Manage Gateway interfaces and routes
+-Change the virtual Gateway model
+-Change cluster configuration
+-Register Gateway
+-Unregister Gateway
+-Stop Gateway
+-Soft restart
+-Hard restart
+-Refresh Gateway status
+
 3. manage platform
 4. Show changes
 5. Discard chnages
