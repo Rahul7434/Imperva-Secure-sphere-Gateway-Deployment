@@ -93,6 +93,14 @@ To add the gateway to existing cluster, open the "impcfg" it will promt for:
      -impctl gateway cluster config --cluster-port-5559 --clusterinterface=eth0
      - impctl gateway register --gateway-group-name="cluster groupname"
      - impctl service start --prepare --transient gateway
+     - After confirmation this will apply the change.
+
+ 
+ Now Move Gateway to Cluster Through GUI:
+     -Go to the Cluster management on mx GUI 
+     -Select the gateway and click on move and it will prompt for select cluster group name
+     
+
 
 
       
