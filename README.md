@@ -294,3 +294,51 @@ GUI administrator password
 Used to access the MX GUI:
 https://<MX-IP>:8083
 ```
+# Imperva SecureSphere SOM Deployment
+```
+SOM means Security Operations Manager. In newer Imperva DAM documentation, it may be referred to as Management Server Manager.
+SOM is a centralized management layer used when an organization has multiple Management Servers, or MXs.
+
+Main purpose of SOM
+
+SOM is used for:
+
+-Centralized visibility across multiple MX servers
+-Managing multiple DAM deployments
+-Consolidated enterprise-level monitoring
+-Viewing alerts and events from different MX systems
+-Centralized reporting
+-Managing deployments across multiple sites or regions
+-Providing a common operational view to SOC teams
+-Monitoring registered MX health and communication
+
+Simple difference:
+SOM manages multiple MX servers.
+MX manages Gateways, Agents, policies, audit data and alerts.
+Gateway receives database activity from Agents.
+
+```
+2. Basic requirements
+```
+Before deploying SOM, we should have:
+Approved SOM architecture
+SOM or Management Server Manager license
+Azure subscription and resource group
+Supported Azure region
+VNet and subnet
+Static private IP
+Valid hostname/FQDN
+Correct Azure VM sizing
+Required disk capacity
+Azure NSG and firewall rules
+DNS and NTP details
+Secure administrative passwords
+Details of MX servers that will be registered
+Compatible DAM versions on SOM and MX
+Maintenance/change window
+Jump-server connectivity to SOM
+
+If this is a fresh deployment, MX servers can be deployed before or after SOM. However, the MX must be available before you can complete registration and communication validation between SOM and MX.
+
+For an existing environment, confirm that SOM and MX versions and patches are compatible before registration.
+```
